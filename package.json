@@ -1,0 +1,22 @@
+{
+  "name": "kahoot-platform",
+  "version": "1.0.0",
+  "description": "Full-stack Kahoot-like platform",
+  "scripts": {
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "cd server && npm run dev",
+    "client": "cd client && npm start",
+    "build": "cd server && npm run build && cd ../client && npm run build",
+    "install-all": "cd server && npm install && cd ../client && npm install",
+    "docker:build": "docker-compose build",
+    "docker:up": "docker-compose up -d",
+    "docker:down": "docker-compose down",
+    "docker:logs": "docker-compose logs -f"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.0"
+  },
+  "keywords": ["quiz", "kahoot", "real-time", "education"],
+  "author": "Your Name",
+  "license": "MIT"
+}
